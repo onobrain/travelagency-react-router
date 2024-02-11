@@ -1,13 +1,201 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+  --primary : #181816;
+  --secondary : #423442;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin : 0;
+  padding : 20px;
+  font-family: "Poppins";
+  background-color: whitesmoke;
+  height: 100vh;
+}
+
+* {
+  color: var(--primary);
+  margin : 0;
+  box-sizing: border-box;
+  padding : 0;
+}
+
+p {
+  margin : 20px 0;
+}
+
+button {
+  border: 0;
+  padding : .25rem .5rem;
+  border-radius: 4px;
+  color:white;
+  background-color: var(--secondary);
+}
+
+/* NAV BAR */
+.nav-bar {
+  margin:auto;
+  max-width: 1200px;
+  width : 100%;
+  display: flex;
+  gap : 15px;
+}
+
+.nav-bar h1 {
+  margin-right: auto; 
+}
+
+.nav-bar a {
+  text-decoration: none;
+  margin : auto 0;
+  color: var(--primary);
+  border-radius: 4px;
+  padding : .25rem .5rem;
+}
+
+.nav-bar a:hover , .nav-bar a.active{
+  background-color:#472947d2 ;
+  color : white;
+}
+
+/* HOME PAGE */
+.home {
+  max-width: 1200px;
+  margin: 3rem auto;
+  display: flex;
+}
+.home img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+
+
+.home article {
+  margin-top : 3rem;
+  width : 40%;
+  float : right;
+}
+
+.home article p {
+  font-size: 1.25rem;
+}
+
+@media (max-width : 900px) {
+  .home {
+    flex-direction: column;
+  }
+  .home img {
+    width : 100%;
+    height : 300px;
+  }
+  .home article {
+    width : 100%;
+    text-align: center;
+  }
+}
+
+/* ABOUT PAGE */
+.about {
+  max-width : 1200px;
+  margin : 5rem auto;
+}
+
+.about main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.about main article {
+  width: 38%; /* Adjust the width as needed */
+  text-align: justify;
+}
+
+@media (max-width : 800px) {
+  .about {
+    max-width: 80%;
+  }
+  .about main article {
+    width : 45%;
+  }
+}
+
+/* EXPLORE LAYOUT */
+.explore-layout {
+  max-width : 1200px;
+  margin : 0 auto;
+}
+
+.explore-layout main {
+  margin-top: 3rem;
+}
+
+.countries .country-card {
+  background : whitesmoke;
+  border-radius: 6px;
+  padding : 3rem 2rem;
+  margin : 2rem auto;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  max-width: 1000px;
+  cursor: pointer;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.295); /* Adjust values as needed */
+  transition: all .5s ease-in-out;
+}
+
+.countries .country-card:hover {
+  scale: 1.1;
+}
+.countries .country-card img {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+.countries .country-card p:first-of-type {
+  font-size: 1.25rem;
+  font-weight: bolder;
+}
+
+.countries .country-card p {
+  color : black;
+  margin-left: 270px;
+}
+
+.country-details {
+  max-width : 1200px;
+  margin : 3rem auto;
+}
+
+.country-details img{
+  width : 100%;
+  max-width: 1100px;
+  height : 300px;
+  object-fit: cover;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  border-radius: 6px;
+}
+.country-details h3 {
+  margin-top: 3rem;
+}
+
+.country-details article {
+  margin-bottom: 3rem;
+  max-width: 1000px;
+}
+
+.country-details a{
+  padding : 1rem 2rem;
+  background:var(--secondary);
+  color:whitesmoke;
+  font-weight: bold;
+  border-radius: 6px;
 }
